@@ -1,0 +1,86 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background-color: rgba(249, 109, 141, 0.6);
+    .logo h1 {
+        font-size: 5.5rem;
+        font-weight: 700;
+        margin: 0;
+    }
+    .logo {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .logo span {
+        font-size: 1.4rem;
+        letter-spacing: .2rem;
+    }
+    .contenido-header {
+        padding: 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+}
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    @include m.tablet {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        a {
+            font-size: 1.4rem;
+            white-space: nowrap;
+        }
+    }
+    a {
+        font-size: 1.6rem;
+        transition: color .3s ease;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -.4rem;
+            width: 0;
+            height: 2px;
+            background: v.$button_hover;
+            transition: width .3s ease;
+        }
+        &:hover::after {
+            width: 100%;
+        }
+        &:hover {
+        color: v.$button_hover;
+        }
+    }
+    .carrito {
+        font-size: 2rem;
+        margin-left: 4rem;
+    }
+    .carrito:hover {
+        transform: scale(1.1);
+    }
+    .carrito::after {
+        content: none;
+    }
+}
+

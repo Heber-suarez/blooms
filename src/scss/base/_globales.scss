@@ -1,0 +1,46 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+html {
+    box-sizing: border-box;
+    scroll-padding-top: 0rem;
+}
+*, 
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: v.$fuente_principal;
+    background: linear-gradient(
+        180deg,
+        v.$primario,
+        v.$secundario
+    );
+    color: v.$blanco;
+
+}
+
+.logo h1,
+.productos h2,
+.card h3 {
+    font-family: v.$fuente_secundaria;
+    font-optical-sizing: auto;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

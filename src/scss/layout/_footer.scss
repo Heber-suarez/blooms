@@ -1,0 +1,141 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.footer {
+
+    background-color: v.$primario;
+
+    padding: 4rem 2rem 0rem;
+
+    
+
+    &-grid {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 4rem;
+
+        @include m.tablet {
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 0;
+        }
+    }
+
+    &-col {
+
+        padding: 0 3rem;
+
+        &:not(:last-child) {
+
+            @include m.tablet {
+                border-right: 1px solid rgba(255,255,255,.2);
+            }
+        }
+
+        h2 {
+
+            font-size: 5.5rem;
+
+            color: v.$blanco;
+
+            margin: 0;
+
+            line-height: 1;
+        }
+
+        h3 {
+
+            font-size: 3rem;
+
+            color: v.$blanco;
+
+            margin-bottom: 2rem;
+        }
+
+        p {
+
+            color: v.$blanco;
+
+            font-size: 1.6rem;
+        }
+
+        ul {
+
+            list-style: none;
+
+            padding: 0;
+            margin: 0;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 1.5rem;
+
+            li {
+
+                display: flex;
+
+                align-items: center;
+
+                gap: 1rem;
+
+                color: v.$blanco;
+
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &-copy {
+
+        margin-top: 5rem;
+
+        padding-top: 2rem;
+
+        border-top: 1px solid rgba(255,255,255,.15);
+
+        text-align: center;
+
+        p {
+
+            color: rgba(255,255,255,.8);
+
+            font-size: 1.4rem;
+            margin-bottom: 0;
+        }
+        span {
+
+            color: #0A84FF;
+
+            font-weight: 700;
+        }
+    }
+}
+.redes {
+
+        display: flex;
+
+        gap: 2rem;
+
+        margin-top: 2rem;
+
+        a {
+
+            color: v.$blanco;
+
+            font-size: 2.2rem;
+
+            transition: .3s ease;
+
+            &:hover {
+
+                transform: translateY(-3px);
+
+                opacity: .8;
+            }
+        }
+        }

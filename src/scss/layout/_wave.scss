@@ -1,0 +1,14 @@
+@use '../base/variables' as v;
+
+.wave-top {
+    //background-color: #F75C83;
+    line-height: 0;
+    margin-bottom: -1px;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+

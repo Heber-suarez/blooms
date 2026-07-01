@@ -8,9 +8,12 @@
     backdrop-filter: blur(10px);
     background-color: rgba(249, 109, 141, 0.6);
     .logo h1 {
-        font-size: 5.5rem;
+        font-size: 3.8rem;
         font-weight: 700;
         margin: 0;
+        @include m.tablet {
+            font-size: 5.5rem;
+        }
     }
     .logo {
         display: flex;
@@ -18,17 +21,21 @@
         gap: 0;
     }
     .logo span {
-        font-size: 1.4rem;
-        letter-spacing: .2rem;
+        font-size: 1rem;
+        letter-spacing: .15rem;
+        @include m.tablet {
+            font-size: 1.4rem;
+            letter-spacing: .2rem;
+        }
+
     }
     .contenido-header {
-        padding: 0rem;
+        paddin0g: 1rem 0;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
         gap: 3rem;
         @include m.tablet {
-            flex-direction: row;
             justify-content: space-between;
             align-items: center;
             gap: 2rem;
@@ -37,12 +44,14 @@
 }
 
 .navegacion-principal {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
     flex-wrap: wrap;
+    margin-left: auto;
     @include m.tablet {
+        display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         gap: 2rem;
@@ -72,6 +81,11 @@
         color: v.$button_hover;
         }
     }
+}
+.acciones-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
     .carrito {
         font-size: 2rem;
         margin-left: 4rem;
@@ -83,4 +97,20 @@
         content: none;
     }
 }
-
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 200;
+    font-size: 2.4rem;
+    color: v.$blanco;
+}
+@include m.tablet {
+    .menu-toggle {
+        display: none;
+    }
+    .navegacion-principal {
+        display: flex;
+    }
+}

@@ -17,6 +17,14 @@
         animation: scroll-promo 12s linear infinite;
         margin: 0 4rem;
     }
+    p:not(:first-child) {
+        display: none;
+    }
+    @include m.tablet {
+        p {
+            display: inline-block;
+        }
+    }
 
     @keyframes scroll-promo {
         0% { transform: translateX(100vw); }

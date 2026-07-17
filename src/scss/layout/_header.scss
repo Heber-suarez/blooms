@@ -19,6 +19,8 @@
         display: flex;
         flex-direction: column;
         gap: 0;
+        flex: 1;
+        min-width: 0;
     }
     .logo span {
         font-size: 1rem;
@@ -85,10 +87,14 @@
 .acciones-header {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
+    flex-shrink: 0;
     .carrito {
         font-size: 2rem;
-        margin-left: 4rem;
+        margin-left: 0;
+        @include m.tablet {
+            margin-left: 4rem;
+        }
     }
     .carrito:hover {
         transform: scale(1.1);

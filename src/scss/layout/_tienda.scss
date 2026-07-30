@@ -4,3 +4,37 @@
 li {
     list-style-type: none;
 }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+aside {
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .logo h1 {
+        margin: 0;
+    }
+
+    /*.footer p {
+        font-size: 1rem;
+    }*/
+}
+
+main {
+    background-color: v.$blanco;
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2rem;
+    padding: 3rem;
+    h2 {
+        color: v.$oscuro;
+    }
+}

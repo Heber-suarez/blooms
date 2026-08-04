@@ -37,6 +37,7 @@ aside {
         color: v.$blanco;
         cursor: pointer;
         display: flex;
+        align-items: center;
         gap: 1rem;
         font-weight: 600;
         padding: 1rem;
@@ -71,6 +72,9 @@ aside {
         background-color: transparent;
         border-top-right-radius: 1rem;
         box-shadow: 0 -1rem 0 v.$blanco;
+    }
+    .boton-carrito {
+        margin-top: 2rem;
     }
     .bi-hand-index-thumb-fill,
     .bi-hand-index-thumb { 

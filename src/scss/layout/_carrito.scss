@@ -1,6 +1,9 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
+//main {
+//    height: 90vh;
+//}
 //Carrito vacio
 
 .contenedor-carrito {
@@ -8,9 +11,10 @@
     flex-direction: column;
     gap: 1.5rem;
 }
-.carrito-vacio {
+.carrito-vacio,
+.carrito-comprado {
     color: v.$oscuro;
-    display: none;
+    font-size: 1.5rem;
 }
 .carrito-productos {
     display: flex;
@@ -54,13 +58,28 @@
         text-transform: uppercase;
         cursor: pointer;
     }
+    .carrito-acciones-derecha {
+        display: flex;
+    }
+    .carrito-acciones-total {
+        display: flex;
+        background-color: v.$card_bg;
+        padding: 1rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        text-transform: uppercase;
+    }
     .carrito-acciones-comprar {
         border: 0;
         background-color: v.$button;
         padding: 1rem;
-        border-radius: 1rem;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
         text-transform: uppercase;
         cursor: pointer;
         color: v.$blanco;
     }
+}
+.disabled {
+    display: none;
 }

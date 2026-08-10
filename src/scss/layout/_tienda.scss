@@ -82,6 +82,10 @@ aside {
         padding: .25rem;
         border-radius: .25rem;
     }
+    .boton-carrito.active .numerito {
+        background-color: v.$primario;
+        color: v.$blanco;
+    }
     .bi-hand-index-thumb-fill,
     .bi-hand-index-thumb { 
         transform: rotateZ(90deg);

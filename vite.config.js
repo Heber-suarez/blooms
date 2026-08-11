@@ -1,7 +1,12 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import { imagetools } from 'vite-imagetools'
 
 export default defineConfig({
+    plugins: [
+        imagetools()
+    ],
+    
     build: {
         rollupOptions: {
             input: {

@@ -4,8 +4,8 @@
 .sobre-mi {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    padding: 2rem;
+    gap: 1rem;
+    padding: 1rem;
 }
 @include m.tablet {
     .sobre-mi {
@@ -30,6 +30,8 @@
     align-items: flex-start;
     h3 {
         text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 2rem;
         //text-align: center;
         font-size: 2rem;
     }

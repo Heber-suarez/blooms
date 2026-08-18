@@ -57,8 +57,11 @@
         </aside>
         <main>
             <h2 class="titulo-principal">Todos los productos</h2>
-            <div class="catalogo-filtros">
-                <input type="search" placeholder="Buscar productos ...">
+            <!--<div class="catalogo-filtros">
+                <div class="buscador">
+                    <i class="bi bi-search"></i>
+                    <input type="search" placeholder="Buscar productos...">
+                </div>
                 <select>
                     <option value="">Todas las categorías</option>
                     <option value="">Perfumes</option>
@@ -73,7 +76,94 @@
                     <option value="">Mayor precio</option>
                     <option value="">Más vendido</option>
                 </select>
+            </div>-->
+            <div class="barra-filtros">
+                <div class="buscador">
+                    <i class="bi bi-search"></i>
+                    <input type="search" placeholder="Buscar productos...">
+                </div>
+                <div class="ordenar">
+                    <label for="ordenar">Ordenar por</label>
+                    <select id="ordenar">
+                        <option value="">Más recientes</option>
+                        <option value="">Menor precio</option>
+                        <option value="">Mayor precio</option>
+                        <option value="">Más vendido</option>
+                    </select>
+                </div>
+                <button class="boton-filtros">
+                    <i class="bi bi-funnel"></i>
+                    Filtros
+                </button>
             </div>
+            <div class="panel-filtros">
+                <div class="filtro">
+                    <h3>Categoría</h3>
+                    <label>
+                        <input type="radio" name="categoria" checked>
+                        Todos
+                    </label>
+                    <label>
+                        <input type="radio" name="categoria">
+                        Perfumes
+                    </label>
+                    <label>
+                        <input type="radio" name="categoria">
+                        Accesorios
+                    </label>
+                    <label>
+                        <input type="radio" name="categoria">
+                        MakeUp
+                    </label>
+                    <label>
+                        <input type="radio" name="categoria">
+                        Combos
+                    </label>
+                </div>
+                <div class="filtro">
+                    <h3>Precio</h3>
+                    <label>
+                        <input type="checkbox">
+                        Menos de $20.000
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        $20.000 - $40.000
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Más de $40.000
+                    </label>
+                </div>
+                <div class="filtro">
+                    <h3>Ordenar por</h3>
+                    <label>
+                        <input type="radio" name="orden">
+                        Más recientes
+                    </label>
+                    <label>
+                        <input type="radio" name="orden">
+                        Precio: menor a mayor
+                    </label>
+                    <label>
+                        <input type="radio" name="orden">
+                        Precio: mayor a menor
+                    </label>
+                    <label>
+                        <input type="radio" name="orden">
+                        Nombre: A - Z
+                    </label>
+                    <label>
+                        <input type="radio" name="orden">
+                        Nombre: Z - A
+                    </label>
+                </div>
+                <button class="limpiar-filtros">
+                    <i class="bi bi-arrow-clockwise"></i>
+                    Limpiar filtros
+                </button>
+            </div>
+
             <div class="contenedor-productos">
                 <div class="producto">
                     <img class="producto-imagen" src="/src/img/01.webp" alt="Mascarilla">
